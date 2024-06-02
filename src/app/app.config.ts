@@ -1,7 +1,7 @@
 import {APP_INITIALIZER, ApplicationConfig, provideZoneChangeDetection} from '@angular/core';
-import { provideRouter } from '@angular/router';
+import {provideRouter} from '@angular/router';
 
-import { routes } from './app.routes';
+import {routes} from './app.routes';
 import {provideHttpClient} from "@angular/common/http";
 import {provideOAuthClient} from "angular-oauth2-oidc";
 import {Config} from "./service/Config";
@@ -14,7 +14,7 @@ const initConfig = (config: Config): (() => Observable<boolean>) => {
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideZoneChangeDetection({ eventCoalescing: true }),
+    provideZoneChangeDetection({eventCoalescing: true}),
     provideRouter(routes),
     provideHttpClient(),
     provideOAuthClient(),
