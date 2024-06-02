@@ -1,0 +1,25 @@
+div a {
+    float: left;
+    width: 100px;
+    padding: 10px;
+}
+
+div a img {
+    width: 70px;
+    height: 70px;
+}
+
+div * {
+    text-align: center;
+}
+
+.icon {
+    float: left;
+}
+
+
+:host {
+    width: 50%;
+    display: block;
+    margin: auto;
+}
