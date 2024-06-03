@@ -1,0 +1,15 @@
+@import "@fontsource/roboto";
+
+
+:root {
+  color-scheme: light dark;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+
+  a {
+    color: light-dark(black, white);
+    text-decoration: none;
+  }
+}

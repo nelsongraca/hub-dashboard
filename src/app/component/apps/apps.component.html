@@ -1,18 +1,18 @@
 <div *ngFor="let header of headers" class="icon">
   <a [href]="header.homeUrl">
-    <img src="{{header.iconUrl}}" height="16" width="16"/>
+    <img src="{{header.iconUrl}}"/>
     <p>{{ header.name }}</p>
   </a>
 </div>
 <div *ngIf="authService.isAuthenticated() && config.canChangePassword" class="icon">
   <a (click)="goToSetPassword()" class="pointer">
-    <img ngSrc="/assets/password.svg" height="16" width="16" priority/>
+    <img src="assets/password.svg" priority/>
     <p>Set Password</p>
   </a>
 </div>
-<div *ngIf="authService.isAuthenticated()" class="icon">
+<div *ngIf="authService.isAuthenticated() && config.canLogout" class="icon">
   <a (click)="logout()" class="pointer">
-    <img ngSrc="/assets/logout.svg" height="16" width="16"/>
+    <img src="assets/logout.svg"/>
     <p>Logout</p>
   </a>
 </div>

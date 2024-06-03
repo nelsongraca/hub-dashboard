@@ -28,13 +28,14 @@ export class PasswordComponent implements OnInit {
   }
 
   ngOnInit() {
-    if (!this.config.canChangePassword) {
-
-    } else {
+    if (this.config.canChangePassword) {
       this.hubService.getCurrentUsername().subscribe(value => {
         this.currentUsername = value.login;
       });
       this.message = " ";
+    }
+    else {
+      this.router.gotoApps();
     }
   }
 

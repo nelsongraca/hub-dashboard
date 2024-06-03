@@ -10,6 +10,7 @@ export class Config {
   public coreModuleId: string | null = null;
   public hubUrl!: string;
   public canChangePassword: boolean = false;
+  public canLogout: boolean = false;
 
   constructor(private http: HttpClient) {
   }
@@ -19,7 +20,9 @@ export class Config {
       map(config => {
         this.hubClientId = config.hubClientId;
         this.hubUrl = config.hubUrl;
-        this.coreModuleId = config.coreModuleId;
+        this.coreModuleId = config.coreModuleId ?? null;
+        this.canChangePassword = config.canChangePassword ?? false;
+        this.canLogout = config.canLogout ?? false;
         return true;
       })
     )
