@@ -18,7 +18,11 @@ div * {
 
 
 :host {
-    width: 50%;
+  @media (width <= 1080px) {
+    width: 100%;
+  }
+
+  width: 50%;
     display: block;
     margin: auto;
 }
